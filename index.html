@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arkaid</title>
     <link rel="stylesheet" href="./src/css/cardFilter.css" />
-    <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="src/js/index.js"></script>
+    <script src="src/js/FiltradoServicios.js"></script>
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
 
   </head>
 
@@ -128,97 +128,112 @@
     <!--Cristian FINAL-->
 
     <!--Sebastian-->
-    <section id="FiltradoCards"
-      class="bg-white mt-5 space-y-2">
-      <h6 class="text-center mb-3">Nuestros Servicios</h6>
+    <section id="FiltradoCards" class="bg-white mt-5 space-y-4">
+      <h5 class="text-center mb-3">Nuestros Servicios</h5>
 
-      <!-- Primeras tres Trajetas -->
+      <!-- Filtrado -->
+      <section class="flex justify-center md:py-3 lg:py-4" data-aos="fade-up"
+        data-aos-delay="150">
+        <ul id="portfolio-flters"
+          class="flex flex-col justify-center items-center md:flex-row md:space-x-3 lg:flex-row lg:space-x-5">
+          <li data-filter="*">Todos</li>
+          <li data-filter=".contable">Contables</li>
+          <li data-filter=".tecnologico">Tecnológicos</li>
+          <li data-filter=".marketing">Marketing</li>
+        </ul>
+      </section>
 
-      <section
-        class="grid justify-items-center grid-cols-1 justify-around space-x-1 space-y-2 md:flex md:space-x-7 ">
-        <article class="card mt-2">
-          <img src="src/img/Gestion-Financiera.webp" alt
-            class="w-full h-full rounded-lg hover:absolute">
-          <article id="hidden"
-            class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
-            <p class="text-white">Gestion Financiera</p>
+      <section  data-aos="fade-up" data-aos-delay="300">
+        <!-- Primeras tres Tarjetas -->
+        <section
+          class="portfolio-container grid justify-items-center grid-cols-1 justify-around space-x-1 space-y-2 md:flex md:space-x-7 lg:m-8">
+          <article class="card mt-2 contable">
+            <img src="src/img/Gestion-Financiera.webp" alt="Gestion Financiera"
+              class="w-full h-full rounded-lg">
+            <article id="hidden-1"
+              class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50">
+              <p class="text-white">Gestion Financiera</p>
+            </article>
           </article>
-        </article>
 
-        <section class="card">
-          <img src="src/img/Consultoria-Financiera.webp" alt
-            class="w-full h-full rounded-lg hover:absolute">
-          <article id="hidden"
-            class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
-            <p class="text-white">Consultario Financiera</p>
+          <article class="card contable">
+            <img src="src/img/Consultoria-Financiera.webp"
+              alt="Consultorio Financiero" class="w-full h-full rounded-lg">
+            <article id="hidden-2"
+              class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 ">
+              <p class="text-white">Consultorio Financiero</p>
+            </article>
+          </article>
+
+          <article class="card contable">
+            <img src="src/img/Control-Interno.webp" alt="Control Interno"
+              class="w-full h-full rounded-lg">
+            <article id="hidden-3"
+              class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50">
+              <p class="text-white">Control Interno</p>
+            </article>
           </article>
         </section>
 
-        <article class="card">
-          <img src="src/img/Control-Interno.webp" alt
-            class="w-full h-full rounded-lg hover:absolute">
-          <article id="hidden"
-            class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
-            <p class="text-white">Control Interno</p>
+        <!-- Segundas tres tarjetas -->
+        <section
+          class="grid justify-items-center grid-cols-1 justify-around space-x-1 space-y-2 md:space-x-7 md:flex lg:flex lg:m-8"
+          data-aos="fade-up" data-aos-delay="300">
+          <article class="card mt-2 tecnologico">
+            <img src="src/img/Web-desing.webp" alt="Desarrollo y Diseño Web"
+              class="w-full h-full rounded-lg hover:absolute">
+            <article id="hidden-4"
+              class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
+              <p class="text-white">Desarrollo y Diseño Web</p>
+            </article>
           </article>
-        </article>
-      </section>
 
-      <!-- Segundas tres tarjetas -->
-      <section
-        class="grid justify-items-center grid-cols-1 justify-around space-x-1 space-y-2 md:space-x-7 md:flex lg:flex">
-
-        <article class="card mt-2">
-          <img src="src/img/Web-desing.webp" alt
-            class="w-full h-full rounded-lg hover:absolute">
-          <article id="hidden"
-            class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
-            <p class="text-white">Desarrollo y Diseño Web</p>
+          <article class="card tecnologico">
+            <img src="src/img/Desarrollo-movil.webp" alt="Desarrollo Móvil"
+              class="w-full h-full rounded-lg hover:absolute">
+            <article id="hidden-5"
+              class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
+              <p class="text-white">Desarrollo Móvil</p>
+            </article>
           </article>
-        </article>
 
-        <article class="card">
-          <img src="src/img/Desarrollo-movil.webp" alt
-            class="w-full h-full rounded-lg hover:absolute">
-          <article id="hidden"
-            class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
-            <p class="text-white">Desarrolo Movil</p>
+          <article class="card tecnologico">
+            <img src="src/img/Desarollo-Software.webp"
+              alt="Desarrollo de Software"
+              class="w-full h-full rounded-lg hover:absolute">
+            <article id="hidden-6"
+              class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
+              <p class="text-white">Desarrollo de Software</p>
+            </article>
           </article>
-        </article>
+        </section>
 
-        <article class="card">
-          <img src="src/img/Desarollo-Software.webp" alt
-            class="w-full h-full rounded-lg hover:absolute">
-          <article id="hidden"
-            class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
-            <p class="text-white">Desarrolo de software</p>
+        <!-- Dos tarjetas centradas -->
+        <section
+          class="grid justify-items-center grid-cols-1 justify-around space-y-2 mt-4 md:flex md:space-x-3 lg:space-x-0.5 lg:m-8"
+          data-aos="fade-up" data-aos-delay="300">
+          <article class="card mt-2 mb-2 marketing">
+            <img src="src/img/Comunity-manager.webp"
+              alt="Servicios de Community Manager"
+              class="w-full h-full rounded-lg hover:absolute">
+            <article id="hidden-7"
+              class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block "
+              data-seccion="Marketing">
+              <p class="text-white">Servicios de Community Manager</p>
+            </article>
           </article>
-        </article>
-
-      </section>
-
-      <!-- Dos tarjetas centradas -->
-      <section
-        class="grid justify-items-center grid-cols-1 justify-around space-y-2 mt-4 md:flex md:space-x-3 lg:space-x-0.5">
-        <article class="card mt-2 mb-2">
-          <img src="src/img/Comunity-manager.webp" alt
-            class="w-full h-full rounded-lg hover:absolute">
-          <article id="hidden"
-            class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
-            <p class="text-white">Servicios de Community Manager</p>
+          <article class="card marketing">
+            <img src="src/img/Produccion-AudiVisual.webp"
+              alt="Producción Audiovisual"
+              class="w-full h-full rounded-lg hover:absolute">
+            <article id="hidden-8"
+              class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
+              <p class="text-white">Producción Audiovisual</p>
+            </article>
           </article>
-        </article>
-        <article class="card">
-          <img src="src/img/Produccion-AudiVisual.webp" alt
-            class="w-full h-full rounded-lg hover:absolute">
-          <article id="hidden"
-            class="hidden absolute inset-0 flex justify-center items-center justify-center rounded-lg bg-black bg-opacity-50 hover:block ">
-            <p class="text-white">Produccion Audiovisual</p>
-          </article>
-        </article>
+        </section>
       </section>
     </section>
-
     <!--Sebastian-->
     <!--Crystian CARRUSEL INICIO-->
 
@@ -305,6 +320,12 @@
 
     <!--Steven-->
   </body>
-  <script src="bower_components/aos/dist/aos.js"></script>
+  <script src="node_modules/aos/dist/aos.js"></script>
   <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 </html>
+<script>
+ AOS.init({
+    delay: 200,
+    duration: 800
+  });
+</script>

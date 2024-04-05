@@ -30,3 +30,14 @@
 display: flex;
 color: black;
 }
+
+.card:hover #hidden-1,
+.card:hover #hidden-2,
+.card:hover #hidden-3, 
+.card:hover #hidden-4,
+.card:hover #hidden-5,
+.card:hover #hidden-6,
+.card:hover #hidden-7,
+.card:hover #hidden-8{
+  display: flex; /* Mostrar el contenido oculto al hacer hover sobre la tarjeta */
+}
